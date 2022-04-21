@@ -59,7 +59,6 @@ public class Main {
 
         //task 5
         int monthNumber = 1;
-
         switch (monthNumber) {
             case 1:
             case 2:
