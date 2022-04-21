@@ -4,19 +4,19 @@ public class Main {
         //Task 1
         int clientOS = 0;
 
-        /*switch (clientOS){
+        switch (clientOS) {
 
-          case 0:
-          System.out.println("Установите версию приложения для iOS по ссылке");
-          break;
+            case 0:
+                System.out.println("Установите версию приложения для iOS по ссылке");
+                break;
 
-          case 1:
-              System.out.println("Установите версию приложения для Android по ссылке");
-              break;
+            case 1:
+                System.out.println("Установите версию приложения для Android по ссылке");
+                break;
 
-      }*/
+        }
         // Task 2
-       /* int clientDeviceYear = 2015;
+        int clientDeviceYear = 2015;
 
         if (clientOS == 0 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
@@ -29,20 +29,19 @@ public class Main {
         } else {
             System.out.println("Что-то пошло не так, попробуйте еще раз");
 
-        }*/
+        }
 
         //Task 3
-        /*
-        int year = 2020;
-        if (year % 4 == 0) {
-              if ((year % 4 == 0) || (year % 100 != 0)) {
-                System.out.println(year + " год является високосным");
-            }
-            } else {
-                System.out.println(year + " год не является високосным");
-            }*/
-        //task 4
-       /* int deliveryDistance = 10 ;
+
+        int year = 1600;
+        if (year % 4 != 0 || (year % 100 == 0) && (year % 400 != 0)) {
+                    System.out.println(year + " год не является високосным");
+                } else {
+            System.out.println(year + " год является високосным");
+        }
+
+      //task 4
+        int deliveryDistance = 99 ;
         int deliveryDays = 1;
 
 
@@ -55,10 +54,9 @@ public class Main {
                     deliveryDays = deliveryDays + 2;
                     System.out.println("Потребуется дней: " + deliveryDays);
                 }
-            }
-        }
 
-     */
+
+
         //task 5
         int monthNumber = 1;
 
@@ -90,8 +88,6 @@ public class Main {
         }
     }
 }
-
-
 
 
 
