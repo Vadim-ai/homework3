@@ -55,8 +55,6 @@ public class Main {
                     System.out.println("Потребуется дней: " + deliveryDays);
                 }
 
-
-
         //task 5
         int monthNumber = 1;
         switch (monthNumber) {
@@ -84,6 +82,64 @@ public class Main {
                 System.out.println("Такого месяца не существует");
 
 
+        }
+
+        //Lesson 3 : Task 6
+        {
+            int age = 19;
+            int salary = 58_000;
+
+            if (age < 18) {
+                System.out.println("Иди в школу... Тебе не нужен кредит, успеешь еще"); //банк же заботливый, а ограничение забыл
+            } else if (age < 23) {
+                System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + (salary * 2) + " рублей");
+            } else if (age >= 23) {
+                System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + (salary * 3) + " рублей");
+            } else if (age < 23 && salary >= 50000) {
+                System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + ((salary * 2) * 1.2) + " рублей");
+            } else if (age < 23 && salary >= 80000) {
+                System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + ((salary * 2) * 1.5) + " рублей");
+            } else if (age >= 23 && salary >= 50000) {
+                System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + ((salary * 3) * 1.2) + " рублей");
+            } else if (age >= 23 && salary >= 80000) {
+                System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + ((salary * 3) * 1.5) + " рублей");
+            }
+
+        }
+
+
+        //Lesson 3 : Task 7
+        {
+            double baseRate = 1.1;
+            double creditPeriod = 12.0;
+            double salary = 60_000.0;
+            double age = 25.0;
+            double wantedSum = 330_000.0;
+            double paymentLimit = salary / 2;
+            double creditPaymentPerMonth;
+            String check;
+
+            if (age < 23) {
+                baseRate = baseRate + 0.01;
+
+
+            } else if (age < 30 ) {
+                baseRate = baseRate + 0.005;
+            }
+
+            if (salary > 80000) {
+                baseRate = baseRate - 0.007;
+            }
+
+            creditPaymentPerMonth = (wantedSum * baseRate) / creditPeriod;
+
+            if (paymentLimit > creditPaymentPerMonth) {
+                check = "Одобрено";
+            } else {
+                check = "Отказ";
+            }
+
+            System.out.println("Максимальный платеж при ЗП " + salary + " равен " + paymentLimit + " рублей. Платеж по кредиту " + creditPaymentPerMonth + " рублей." + check);
         }
     }
 }
